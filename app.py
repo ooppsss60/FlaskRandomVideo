@@ -14,27 +14,13 @@ def showVideo():
 		};
 	});
 	'''
-
-	cssText = '''
-	body {
-		background-color: #000000;
-	} 
-	#video {
-		object-fit: contain;
-		position: fixed;
-		width: 100%;
-		height: 100%;
-	}
-	'''
-
+	
 	htmlText = '''
 	<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Random video</title>
-	<style>
-	%s
-	</style>
+	<link rel="stylesheet" href="static/style.css">
 	</head>
 	<script>
 	%s
@@ -42,7 +28,7 @@ def showVideo():
 	<video controls="controls" id="video" preload="auto" autoplay="true">
 		<source src="static/webm/%s">
 	</video>
-	''' % (cssText, jsText, webmList[webmNumber])
+	''' % (jsText, webmList[webmNumber])
 	
 	return htmlText
 
